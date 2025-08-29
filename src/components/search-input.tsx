@@ -6,6 +6,7 @@ import Link from "next/link";
 import { LOCATION_SUGGESTIONS } from "@/data";
 import { ILocationSuggestion } from "@/types";
 import Image from "next/image";
+import { Search } from "lucide-react";
 
 export const SearchInput = () => {
   const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -25,8 +26,10 @@ export const SearchInput = () => {
       setIsSuggestionsOpen(true);
       if (search.toLowerCase().startsWith("uni")) {
         timerRef.current = setTimeout(() => {
-          setSuggestions(LOCATION_SUGGESTIONS);
-        }, 2000);
+          setSuggestions(
+            LOCATION_SUGGESTIONS as unknown as ILocationSuggestion[]
+          );
+        }, 1000);
       }
     } else {
       setIsSuggestionsOpen(false);
@@ -40,19 +43,26 @@ export const SearchInput = () => {
     };
   }, [search]);
 
+  console.log(suggestions);
+
   return (
     <form
       onSubmit={handleSearch}
-      className="w-full mt-4 flex items-center justify-center gap-4"
+      className="w-full my-4 flex items-center justify-center gap-4 my-container"
     >
       <div className="flex items-center justify-center gap-4 w-full relative">
+        <Search
+          className="absolute left-4 max-sm:text-base text-gray-400"
+          size={24}
+        />
+
         <input
           autoFocus
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full border-2 border-black rounded-full p-4"
+          className="w-full border-2 border-black rounded-full p-4 pl-12"
           type="text"
-          placeholder="Places to go..."
+          placeholder="Places to go, experiences to have..."
         />
         {suggestions && suggestions?.length > 0 ? null : (
           <Button
@@ -65,7 +75,7 @@ export const SearchInput = () => {
 
         {/* Suggestions  */}
         {isSuggestionsOpen && (
-          <ul className="absolute top-18 left-0 w-full bg-white rounded-lg border-2 border-black min-h-16">
+          <ul className="absolute top-18 left-0 w-full bg-white rounded-lg border-2 border-black min-h-16 z-50">
             {suggestions && suggestions?.length > 0 ? (
               suggestions?.map((suggestion) => (
                 <li
@@ -73,7 +83,7 @@ export const SearchInput = () => {
                   className="w-full flex flex-col items-start text-left"
                 >
                   <Link
-                    href={suggestion.link}
+                    href={`/${suggestion.slug}`}
                     className="w-full py-4 hover:bg-gray-100 cursor-pointer px-4 flex items-center justify-start gap-4"
                   >
                     {suggestion.image && (
@@ -81,15 +91,15 @@ export const SearchInput = () => {
                         onError={(e) => {
                           e.currentTarget.src = "/location/none.jpg";
                         }}
-                        src={suggestion.image}
-                        alt={`${suggestion.location} image`}
+                        src={suggestion.image?.[0] || ""}
+                        alt={`${suggestion.name} image`}
                         className="size-20 rounded-sm aspect-square object-cover bg-gray-100 border shadow-sm"
                         width={100}
                         height={100}
                       />
                     )}
                     <div className="flex flex-col items-start justify-center">
-                      <p className="text-lg font-bold">{suggestion.location}</p>
+                      <p className="text-lg font-bold">{suggestion.name}</p>
                       <p className="text-sm text-gray-800">
                         {suggestion.city}, {suggestion.country}
                       </p>

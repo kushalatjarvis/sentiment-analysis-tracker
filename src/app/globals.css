@@ -119,6 +119,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .my-container {
+    @apply max-w-[350px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1024px] 2xl:max-w-[1440px] mx-auto;
+  }
 }
 
 body {

@@ -73,8 +73,15 @@ export const ReviewCard = ({ review }: IReviewCardProps) => {
       {/* Date and trip type */}
       {(review.tripType || review.travelDate) && (
         <p className="text-sm text-gray-500 my-2">
-          {formatTravelDate(review.travelDate)} •{" "}
-          <span className="capitalize">{review?.tripType.toLowerCase()}</span>
+          {formatTravelDate(review.travelDate)}
+          {review.tripType && (
+            <>
+              {" • "}
+              <span className="capitalize">
+                {review.tripType.toLowerCase()}
+              </span>
+            </>
+          )}
         </p>
       )}
 

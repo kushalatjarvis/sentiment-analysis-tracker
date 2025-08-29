@@ -354,7 +354,13 @@ export const REVIEWS = [
             text: "Now that my grandchildren and children are older, we are going to set Disney aside for a few years and decided to do universal annual passes and are so glad we did. There is something for everyone.",
             travelDate: null,
             tripType: null,
-            category: ["Pricing", "Operations", "Customer Support", "Facilities", "Experience"],
+            category: [
+              "Pricing",
+              "Operations",
+              "Customer Support",
+              "Facilities",
+              "Experience",
+            ],
             sentiment: "Positive",
             user: {
               name: "Emmajean J",
@@ -398,7 +404,12 @@ export const REVIEWS = [
             text: "This place is out of this world. Jurassic park, Hulk, Transformers! The park is clean and tidy despite the volume of guests. The staff are really friendly and helpful. There are safe and secure lockers to store away valuables when on the more daring of rides. \nIf you want to scare the living Jesus out of yourself then try the Jurassic Park Raptor ride!!!!",
             travelDate: "2024-10",
             tripType: "FAMILY",
-            category: ["Pricing", "Operations", "Customer Support", "Experience"],
+            category: [
+              "Pricing",
+              "Operations",
+              "Customer Support",
+              "Experience",
+            ],
             sentiment: "Positive",
             user: {
               name: "M8x1mus",
@@ -838,7 +849,12 @@ export const REVIEWS = [
             text: "Just to express my disappointment with Epic Universe. Despite being beautiful, it is just not functioning well.\n>\n> Here is my experience:\n>\nExtreme long queues for lunch…\n\nSoda machine was out of coke and any juice, what do you do if your kids doesn’t drink soda?\n\nCarrossel attraction broke while we were in the line.\n\nIce cream vendor was out of ice cream flavors\n\nI went to the guest service and the two ladies who attended me, used a “call center” script instead of having a conversation.\n\nSingle riders queue in the  Mario Kart ride, showed sign that the queue was OPEN so I went with my sister and left my 5 year old. It took us 2 hours to ride. No problem to wait, but set clear expectations, and say it it will take 2 hours.\n\nWent to Harry Potter simulator, after 2:40 min in the line, our ride had 2 seats empty and I asked if they were broke, the employee told that they were not! Why? 2 seats available that is why the queues are so long\n\nWent to meet and greet Toothless Dragon, they said that we had to wait more 15 min because toothless had to have a break. Really?",
             travelDate: "2025-07",
             tripType: "FAMILY",
-            category: ["Pricing", "Customer Support", "Facilities", "Experience"],
+            category: [
+              "Pricing",
+              "Customer Support",
+              "Facilities",
+              "Experience",
+            ],
             sentiment: "Negative",
             user: {
               name: "Sofia B",
@@ -932,7 +948,13 @@ export const REVIEWS = [
             text: "Good theme park, but expensive.  Also, TERRIBLE  for people with disabilities.  I'd followed the procedure & advised online that would be in need an assistance pass. I was supposed to get a phone call to discuss need.   No call!!  I emailed them,  no response!!!\n\nArrived at the park. Waited for an hour in the queue to get the assistance pass, to be told i wasnt eligible under the parks regulations!! I have CFS/ME & osteoarthritis in both knees,  was in a wheelchair to cope with the park.  My son is type 1 diabetic & unable to withstand long queues as danger of low blood sugars in the heat.  I also had my elderly father with me. Thankfully,  after MUCH discussion with a member of staff,  we got a limited assistance pass. But in total wasted 1 hour & 43 mins at the park! \nThis could have been avoided had I been contacted prior to the visit.  \nI felt like this was a waste of money! (Not a problem at SeaWorld,  they were happy to help us!)\n Considering the high cost for tickets & $60 for parking  you'd think the least they could do would be to help those in need! Appalling !\n\nWill NOT be returning to Universal Studios Orlando.",
             travelDate: "2025-07",
             tripType: "FAMILY",
-            category: ["Pricing", "Operations", "Customer Support", "Facilities", "Experience"],
+            category: [
+              "Pricing",
+              "Operations",
+              "Customer Support",
+              "Facilities",
+              "Experience",
+            ],
             sentiment: "Negative",
             user: {
               name: "Cher Marie Parry",
@@ -1454,7 +1476,13 @@ export const REVIEWS = [
             text: "My wife and I had a fantastic day here.\n\nHighlights included:\n\n- Meeting the Minions as part of their Easter parade (number 1 highlight)\n- Going on a Despicable Me ride (number 2 highlight)\n- The Harry Potter area (not even a big fan, but it was so well done)\n- Going on the Jaws ride (such a classic, am scared of sharks but it wasn't scary- loved it)\n- The Nintendo area (we weren't sure whether we would get in- didn't pay extra for a pass just picked up a timed ticket in the park that didn't guarantee entry) - first it was lovely how a staff member seemed genuinely so excited for us that we were able to go (and the staff in general were very nice). The design of the area was just incredible and the rides were fun.\n\nMy tip is to do single rider on any ride you don't mind going on together, it can make such a difference to the wait time. Then you have extra time to queue for the ones that you do.\n\nThe park has been very cleverly designed and even getting here was simple- the line from central Osaka was fast and inexpensive.",
             travelDate: "2025-03",
             tripType: "COUPLES",
-            category: ["Pricing", "Operations", "Customer Support", "Facilities", "Experience"],
+            category: [
+              "Pricing",
+              "Operations",
+              "Customer Support",
+              "Facilities",
+              "Experience",
+            ],
             sentiment: "Positive",
             user: {
               name: "AlexSwallow",
@@ -1990,7 +2018,12 @@ export const REVIEWS = [
             text: "After visiting other Universal Parks that we loved, we are disappointed with the Osaka version. There are far too many people, the wait times are out of control, and the workers are friendly but completely lack any sense of urgency. Three employees selling water bottles at a cart, but each transaction taking 3-5 minutes. Mobile order at the restaurant, but then told to wait in line with everyone else to pay for and retrieve my food. It starts down pouring rain (not the park’s fault, of course) but there are so many people here that no one could move and everyone is soaked. THIS IS A TERRIBLE PLACE.",
             travelDate: "2025-07",
             tripType: "FAMILY",
-            category: ["Operations", "Customer Support", "Facilities", "Experience"],
+            category: [
+              "Operations",
+              "Customer Support",
+              "Facilities",
+              "Experience",
+            ],
             sentiment: "Negative",
             user: {
               name: "C Turner",
@@ -2546,7 +2579,13 @@ export const REVIEWS = [
             text: "This is the smallest Universal, you can easily do it in half a day. Minions land hadn't quite opened when we were there unfortunately. We did enjoy seeing the different areas to the park. We ended up having lunch like most people at Mel's Diner before heading back to the hotel before it got too hot to be out. Food was OK, chips are not worth it, you only get maybe a handful",
             travelDate: "2025-01",
             tripType: "FAMILY",
-            category: ["Pricing", "Operations", "Customer Support", "Facilities", "Experience"],
+            category: [
+              "Pricing",
+              "Operations",
+              "Customer Support",
+              "Facilities",
+              "Experience",
+            ],
             sentiment: "Neutral",
             user: {
               name: "Single Mum Travels",
@@ -2865,7 +2904,13 @@ export const REVIEWS = [
             text: "I put it down to heat and humidity, plus jet lag kicking in, but this pocket version of the original Hollywood attraction is a pale imitation. It's colourful and crowded, but the queuing times of up to 100 minutes for the more popular rides, plus the generic burger and Coke diners etc, and countless gift shops in such a small space make for a claustrophobic day out. Two or three of the rides were closed for 'refurbishment', including the Waterworld show which I remember loving thirty years ago, and there were rather too many Minions or Sesame Street tie-ins. Maybe I'm a grouch but I reckon this Universal franchisee needs a bit of a kick and upgrade.",
             travelDate: "2025-08",
             tripType: "FAMILY",
-            category: ["Pricing", "Operations", "Customer Support", "Facilities", "Experience"],
+            category: [
+              "Pricing",
+              "Operations",
+              "Customer Support",
+              "Facilities",
+              "Experience",
+            ],
             sentiment: "Positive",
             user: {
               name: "Simon T",
@@ -3258,7 +3303,13 @@ export const REVIEWS = [
             text: "Don’t buy fast pass!!! The best tip is to arrive early like 9am and get in a queue. Beforehand make a list of the attractions you want to visit and just do them in order. Fast pass is very expensive and doesn’t apply to many popular rides so at least an hour in a queue regardless of the pass. Technical issues is a common thing so be prepare an attraction you want to go on will be shut and no compensation!! So go early and don’t waste money on the passes - not worth it!!!",
             travelDate: "2025-07",
             tripType: "FAMILY",
-            category: ["Pricing", "Operations", "Customer Support", "Facilities", "Experience"],
+            category: [
+              "Pricing",
+              "Operations",
+              "Customer Support",
+              "Facilities",
+              "Experience",
+            ],
             sentiment: "Negative",
             user: {
               name: "Stay42923511208",
@@ -3304,7 +3355,13 @@ export const REVIEWS = [
             text: "This was my second time visiting Universal Studios Singapore, and it never disappoints! I was really lucky because when I visited, Minion Land had just opened two days earlier.\n\nI was super impressed with Minion Land — especially the 3D ride, which was so much fun! I also never get tired of the Transformers ride — it’s still one of my favorites.\n\nOverall, I was very satisfied with my visit to Universal Studios Singapore and I’ll definitely come back again",
             travelDate: "2025-02",
             tripType: "FRIENDS",
-            category: ["Pricing", "Operations", "Customer Support", "Facilities", "Experience"],
+            category: [
+              "Pricing",
+              "Operations",
+              "Customer Support",
+              "Facilities",
+              "Experience",
+            ],
             sentiment: "Positive",
             user: {
               name: "Adriana Odelia",
@@ -3797,7 +3854,12 @@ export const REVIEWS = [
             text: "Awful, tacky, expensive, crowded place. My husband booked this as part of our California holiday. We’d been to see the sets at Warner Bros the day before, which was great. This is just hell on earth for me. I am 54, menopausal with arthritis in my neck. Couldn’t go on majority of rides. If he had told me this was mainly rides, I’d have had a day by the pool at our hotel. Boiling hot, crowded, people just walking into you. This place represents the worst of American excess. I’ve loved the west coast but this is just hot and tacky and annoying. Avoid like hell if you do t like tides or crowds or you suffer from hot flushes!",
             travelDate: "2025-08",
             tripType: "FAMILY",
-            category: ["Operations", "Customer Support", "Facilities", "Experience"],
+            category: [
+              "Operations",
+              "Customer Support",
+              "Facilities",
+              "Experience",
+            ],
             sentiment: "Neutral",
             user: {
               name: "CL53",
@@ -3929,7 +3991,13 @@ export const REVIEWS = [
             text: "Universal is amazing defiantly splurge for the express pass if you like to ride rides.  Overall great experience and lots to see could do it all in one day if you go at open and stay till close",
             travelDate: null,
             tripType: null,
-            category: ["Pricing", "Operations", "Customer Support", "Facilities", "Experience"],
+            category: [
+              "Pricing",
+              "Operations",
+              "Customer Support",
+              "Facilities",
+              "Experience",
+            ],
             sentiment: "Positive",
             user: {
               name: "Kim Y",
@@ -3972,7 +4040,12 @@ export const REVIEWS = [
             text: "Cela ne vaut pas le prix, pas beaucoup d’attractions, parmi le peu qu’il y a plusieurs son juste des simulateurs.. tu fais la queue 1heure pour un truc qui dure 15secondes. \nAprès c’est sympas les décors sont supers etc juste cela ne vaut absolument pas les 130€ \nDans le monde des simpson tu t’attends à manger un donut bah tu ne peux pas car ils n’ont que des « donut » géant qui sont des gâteaux du coup et qui coûtent 10$ on s’en fiche un peu on veut juste un donut normal qui a un goût de donut et non de gâteau. \nLe fromage blanc aux fruits qui coûtent 10$ à côté d’une salade de pâte au pesto qui en fait 4,29$ ?? La logique? \nLe studio tour qui nous montre deux trois trucs vite fais pas fou, wisteria lane on le voit pas? On vient pour ça à la base lol. \nEnfin bon, c’était bien mais je m’attendais à mieux.. je suis déçue.",
             travelDate: "2025-07",
             tripType: "FRIENDS",
-            category: ["Pricing", "Operations", "Customer Support", "Experience"],
+            category: [
+              "Pricing",
+              "Operations",
+              "Customer Support",
+              "Experience",
+            ],
             sentiment: "Neutral",
             user: {
               name: "serena N",
@@ -4527,7 +4600,13 @@ export const REVIEWS = [
             text: "Le parc est magnifique et il y a une très belle vue sur la vallée de San Fernando (Los Angeles Nord).\nLe meilleur moment de la journée a été la visite des studios (même s'il pourrait y avoir des audio-guides pour les visiteurs ne maîtrisant pas l'anglais).",
             travelDate: "2025-04",
             tripType: "FAMILY",
-            category: ["Pricing", "Operations", "Customer Support", "Facilities", "Experience"],
+            category: [
+              "Pricing",
+              "Operations",
+              "Customer Support",
+              "Facilities",
+              "Experience",
+            ],
             sentiment: "Positive",
             user: {
               name: "Catherine S",

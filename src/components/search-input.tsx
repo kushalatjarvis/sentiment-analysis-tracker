@@ -13,11 +13,11 @@ export const SearchInput = () => {
 
   const [search, setSearch] = useState<string>("");
   const [isSuggestionsOpen, setIsSuggestionsOpen] = useState<boolean>(false);
-  const [suggestions, setSuggestions] = useState<ILocationSuggestion[]>();
+  const [suggestions, setSuggestions] = useState<ILocationSuggestion[]>([]);
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSearch((e.target as HTMLInputElement).value);
+    // No need to set search here as it's already controlled by the input's onChange
     setIsSuggestionsOpen(true);
   };
 
@@ -38,7 +38,7 @@ export const SearchInput = () => {
     return () => {
       if (timerRef.current) {
         clearTimeout(timerRef.current);
-        setSuggestions([]);
+        timerRef.current = null;
       }
     };
   }, [search]);
@@ -62,7 +62,7 @@ export const SearchInput = () => {
           type="text"
           placeholder="Places to go..."
         />
-        {suggestions && suggestions?.length > 0 ? null : (
+        {suggestions.length > 0 ? null : (
           <Button
             className="absolute right-2 rounded-full p-6 text-black font-semibold"
             type="submit"
@@ -74,8 +74,8 @@ export const SearchInput = () => {
         {/* Suggestions  */}
         {isSuggestionsOpen && (
           <ul className="absolute top-18 left-0 w-full bg-white rounded-lg border-2 border-black min-h-16 z-50">
-            {suggestions && suggestions?.length > 0 ? (
-              suggestions?.map((suggestion) => (
+            {suggestions.length > 0 ? (
+              suggestions.map((suggestion) => (
                 <li
                   key={suggestion.id}
                   className="w-full flex flex-col items-start text-left"

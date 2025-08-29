@@ -110,7 +110,7 @@ const PlaceById = () => {
       </h1>
 
       {activeLocation?.image && activeLocation.image.length > 0 && (
-        <div className="rounded-xl grid grid-cols-1 sm:grid-cols-3 grid-rows-2 sm:grid-rows-1 max-h-160 gap-1 overflow-hidden">
+        <div className="rounded-xl grid grid-cols-1 sm:grid-cols-3 grid-rows-2 sm:grid-rows-1 max-h-90 md:max-h-120 lg:max-h-160 gap-1 overflow-hidden">
           <Image
             src={activeLocation.image[0]}
             alt={activeLocation?.name}

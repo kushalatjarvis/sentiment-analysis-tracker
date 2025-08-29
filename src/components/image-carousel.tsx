@@ -24,7 +24,6 @@ export const ImageCarousel = () => {
 
   useEffect(() => {
     if (isPlaying) {
-      console.log(currentImageIndex);
       if (currentImageIndex >= images.length) {
         intervalRef.current = setInterval(() => {
           setCurrentImageIndex(1);
@@ -59,7 +58,7 @@ export const ImageCarousel = () => {
         {/* Border Right */}
         <div className="bg-black w-0.25 h-full sm:block hidden" />
 
-        <div className="flex flex-col gap-4 justify-center items-center w-full">
+        <div className="flex flex-col gap-2 sm:gap-4 justify-center items-center w-full">
           <h1 className="max-w-lg text-3xl sm:text-6xl font-bold text-center  sm:leading-13 tracking-tighter">
             Find things to do for everything you&apos;re into
           </h1>

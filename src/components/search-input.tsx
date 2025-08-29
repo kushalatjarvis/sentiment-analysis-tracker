@@ -43,8 +43,6 @@ export const SearchInput = () => {
     };
   }, [search]);
 
-  console.log(suggestions);
-
   return (
     <form
       onSubmit={handleSearch}
@@ -62,7 +60,7 @@ export const SearchInput = () => {
           onChange={(e) => setSearch(e.target.value)}
           className="w-full border-2 border-black rounded-full p-4 pl-12"
           type="text"
-          placeholder="Places to go, experiences to have..."
+          placeholder="Places to go..."
         />
         {suggestions && suggestions?.length > 0 ? null : (
           <Button

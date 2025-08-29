@@ -40,7 +40,7 @@ export const PlatformSelection = ({
               }}
             >
               <Image
-                className=""
+                className="sm:w-full px-16 max-sm:aspect-video h-full object-contain"
                 src={platform.image}
                 alt={platform.name}
                 width={1000}

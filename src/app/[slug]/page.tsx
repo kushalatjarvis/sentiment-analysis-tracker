@@ -1,17 +1,18 @@
 "use client";
 
-import { VerificationBadge } from "@/components/icon/badge";
+import { VerificationBadge } from "@/components/icons/badge";
+import { LocationCoverImages } from "@/components/location/location-cover-images";
+import { LocationDashboard } from "@/components/location/location-dashboard";
 import { PlatformSelection } from "@/components/platform-selection";
-import { Reviews } from "@/components/reviews";
+import { Reviews } from "@/components/location/reviews";
 import Loader from "@/components/ui/loader";
 import { REVIEWS } from "@/data/reviews";
 import { isValidPlatform } from "@/lib/utils";
 import { ILocationSuggestion, IPlatform, IReview } from "@/types";
-import { ArrowUpRight, ClockFading } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
+import { LocationInfo } from "@/components/location/location-info";
+import { timings } from "@/lib/variables";
 
 const PlaceById = () => {
   const { slug } = useParams();
@@ -65,7 +66,7 @@ const PlaceById = () => {
       timer.current = setTimeout(() => {
         setAllReviews(activePlatform.reviews as IReview[]);
         setIsLoading(false);
-      }, 2500);
+      }, timings.location.delay);
     } catch (error) {
       console.log(error);
     }
@@ -109,109 +110,21 @@ const PlaceById = () => {
         </span>
       </h1>
 
+      {/* COVER IMAGES */}
       {activeLocation?.image && activeLocation.image.length > 0 && (
-        <div className="rounded-xl grid grid-cols-1 sm:grid-cols-3 grid-rows-2 sm:grid-rows-1 max-h-90 md:max-h-120 lg:max-h-160 gap-1 overflow-hidden">
-          <Image
-            src={activeLocation.image[0]}
-            alt={activeLocation?.name}
-            width={1000}
-            height={1000}
-            className="row-span-2 sm:row-span-1 sm:col-span-2 w-full h-full object-cover object-center"
-          />
-
-          <div className="sm:grid grid-rows-2 gap-1 h-full hidden">
-            <div className="overflow-hidden">
-              <Image
-                src={activeLocation.image[1]}
-                alt={activeLocation?.name}
-                width={1000}
-                height={1000}
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-
-            <div className="overflow-hidden">
-              <Image
-                src={activeLocation.image[2]}
-                alt={activeLocation?.name}
-                width={1000}
-                height={1000}
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-          </div>
-        </div>
+        <LocationCoverImages
+          images={activeLocation?.image}
+          name={activeLocation?.name}
+        />
       )}
 
-      <section className="flex flex-col sm:flex-row justify-between items-start gap-8">
-        {/* ABOUT */}
-        <section className="flex-7/9 w-full">
-          <h3 className="text-2xl font-bold my-6 mt-10">About</h3>
+      {/* ABOUT */}
+      <LocationInfo activeLocation={activeLocation} />
 
-          {/* DESCRIPTION */}
-          {activeLocation?.description && (
-            <p className="text-lg text-gray-500">
-              {activeLocation?.description}
-            </p>
-          )}
+      {/* LOCATION DASHBOARD */}
+      <LocationDashboard reviews={allReviews} />
 
-          {/* DURATION */}
-          {activeLocation?.duration && (
-            <p className="flex items-center gap-2 mt-4 font-semibold">
-              <ClockFading className="w-4 h-4" />
-              Duration :{" "}
-              <span className="font-extralight">
-                {activeLocation?.duration}
-              </span>
-            </p>
-          )}
-        </section>
-
-        {/* OTHER DETAILS */}
-        {activeLocation?.address && (
-          <section className="flex-2/9 w-full">
-            <h3 className="text-2xl font-bold my-6 mt-10">The area</h3>
-            {/* ADDRESS */}
-            {activeLocation?.address && (
-              <Link
-                href={`https://www.google.com/maps/search/?api=1&query=${activeLocation?.address}`}
-                className="text-lg font-bold underline"
-                target="_blank"
-              >
-                {activeLocation?.address}
-              </Link>
-            )}
-
-            {/* CONTACT */}
-            <h3 className="text-lg font-semibold my-2 mt-6">
-              Reach out directly
-            </h3>
-            <div className="flex items-center gap-4">
-              {/* WEBSITE */}
-              {activeLocation?.website && (
-                <Link
-                  href={activeLocation?.website}
-                  target="_blank"
-                  className="flex items-center underline font-bold text-xl"
-                >
-                  Visit website <ArrowUpRight className="w-4 h-4" />
-                </Link>
-              )}
-
-              {activeLocation?.phone && (
-                <Link
-                  href={activeLocation?.phone}
-                  target="_blank"
-                  className="flex items-center underline font-bold text-xl"
-                >
-                  Call
-                </Link>
-              )}
-            </div>
-          </section>
-        )}
-      </section>
-
+      {/* REVIEWS */}
       <Reviews allReviews={allReviews} />
     </main>
   );

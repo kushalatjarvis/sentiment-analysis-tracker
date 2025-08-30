@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { ReviewCard } from "./review-card";
+import { ReviewCard } from "@/components/review-card";
 import { IReview } from "@/types";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 import { Loader } from "lucide-react";
 
